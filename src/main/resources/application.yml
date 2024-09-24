@@ -1,0 +1,26 @@
+server:
+  port: ${APPLICATION_PORT}
+  servlet:
+    context-path: /${CONTEXT_PATH}
+
+spring:
+  application:
+    name: springmybatis
+  datasource:
+    votre:
+      driverClassName: ${DRIVER_CLASS_NAME}
+      url: ${DATASOURCE_URL}
+      libraries: ${LIBRARIES}
+      hikari:
+        connectionTimeout: 30000
+        idleTimeout: 600000
+        maxLifetime: 1800000
+
+#mybatis
+mybatis:
+  config-location: ${MYBATIS_CONFIG_LOCATION}
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
